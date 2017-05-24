@@ -5,11 +5,7 @@
 * Nodejs 6.x.x [link to install](https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions)
   * I used nodejs/express to make a simple webserver to serve the dialplan.xml for freeswitch, just because of it's simplicity
 * Docker
-<<<<<<< upstream/master
   * To deploy freeswitch, not mandatory, but it's easier to deploy using it and some other changes may be needed
-=======
-  * To deploy freeswitch, not mandatory, but it's easier to deploy using it
->>>>>>> HEAD~0
   * sudo docker run -d --name freeswitch -p 5060:5060/tcp -p 5060:5060/udp -p 5080:5080/tcp -p 5080:5080/udp -p 8021:8021/tcp -p 7443:7443/tcp -p 60535-60635:60535-60635/udp -v \<PATH_TO_CONF\>:/usr/local/freeswitch/conf bettervoice/freeswitch-container:1.6.16
 
 ## How to
