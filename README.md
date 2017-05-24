@@ -14,7 +14,7 @@
 2. Change the ips at the ./conf/autoload_modules/xml_curl.conf.xml and ./conf/vars.xml
     * On both files a ##CHANGE_ME## shows where to put the ips
     * On vars.xml we need to change the ip freeswitch will use as domain, for aws instances I used the instance public ip
-    * On xml_curl.conf.xml we need to show where is the service that will provide the dialplan xml.
+    * On xml_curl.conf.xml we need to show where is the service that will provide the dialplan xml(if it's on the same address you can set to $${domain}).
 3. If using docker, start the freeswitch container using the command above. Remember to change \<PATH_TO_CONF> with the path to the conf folder of this project (/home/ubuntu/xml_curl_test/conf)
 4. Start the dialplan webserver.
     * Go to the dialplan folder
