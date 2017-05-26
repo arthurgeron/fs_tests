@@ -3,12 +3,12 @@
 ## Dependencies
 
 * Nodejs 6.x.x [link to install](https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions)
-  * I used nodejs/express to make a simple webserver to serve the dialplan.xml for freeswitch, just because of it's simplicity, all autoload_confings are ran from the nodejs directory except for xml_curl.conf.xml.
+  * I used nodejs/express to make a simple webserver to serve the dialplan.xml for freeswitch, just because of it's simplicity,** all autoload_confings are ran from the nodejs directory except for xml_curl.conf.xml.**
 * Docker [link to install] 
 (https://docs.docker.com/cs-engine/1.13/#install-on-ubuntu-1404-lts-or-1604-lts)
   * To deploy freeswitch, **not** mandatory, but it's easier to deploy using it and some other changes may be needed
   * sudo docker run -d --name freeswitch -p 5060:5060/tcp -p 5060:5060/udp -p 5080:5080/tcp -p 5080:5080/udp -p 8021:8021/tcp -p 7443:7443/tcp -p 60535-60635:60535-60635/udp -v \<PATH_TO_CONF\>:/usr/local/freeswitch/conf bettervoice/freeswitch-container:1.6.16
-  * **Important** this docker image places freeswitch's executable in ```/usr/src/freeswitch``` but loads configuration files from ```/usr/local/freeswitch```, also the configuration files are placed in ```../conf/vanilla``` directory, instead of the default ```../conf``` directory.
+  * **Important** this docker image places freeswitch's executable in ```/usr/src/freeswitch``` but loads configuration files from ```/usr/local/freeswitch```, also the configuration files are placed in ```../conf/vanilla``` directory instead of the default ```../conf``` directory.
 
 ## How to
 
