@@ -15,7 +15,7 @@
 2. Change the ip at the ./conf/autoload_modules/xml_curl.conf.xml and ./conf/vars.xml
     * On vars.xml we need to change the ip freeswitch will use as domain, for aws instances I used the instance public ip, the ip (line 26) will be the IP of your domain/freeswitch server.
     * On xml_curl.conf.xml we need to show where is the service that will provide the dialplan xml(if it's on the same address you can leave gateway-url's as ```$${domain}``` if not put the IP address of yournodejs service).
-    * If using docker, on acl.conf.xml change the cidr on line 26 to the local address of your container, for example if your local IP is "178.18.0.10" change it to ```<node type="allow" cidr="178.18.0.0/16"/>```.  If you are not using docker, delete that line.
+    * If using docker, on acl.conf.xml change the cidr on line 26 to the local address of your container, for example if your local IP is "178.18.0.10" change it to ```<node type="allow" cidr="178.18.0.0/16"/>```(this tells freeswitch to allow requests to/from your docker ip range).  If you are not using docker, delete that line.
 3. If using docker, start the freeswitch container using the command above. Remember to change \<PATH_TO_CONF> with the path to the conf folder of this project (/home/ubuntu/xml_curl_test/conf)
 4. Start the dialplan webserver.
     * Go to the dialplan folder
