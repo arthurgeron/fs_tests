@@ -91,7 +91,7 @@
     <param name="dialplan" value="XML"/>
     <param name="dtmf-duration" value="2000"/>
     <param name="inbound-codec-prefs" value="$${global_codec_prefs}"/>
-    <param name="outbound-codec-prefs" value="$${global_codec_prefs}"/>
+    <param name="outbound-codec-prefs" value="$${outbound_codec_prefs}"/>
     <param name="rtp-timer-name" value="soft"/>
     <!-- ip address to use for rtp, DO NOT USE HOSTNAMES ONLY IP ADDRESSES -->
     <param name="rtp-ip" value="$${local_ip_v4}"/>
@@ -281,9 +281,8 @@
          auto                  - Use guessed ip.
          auto-nat              - Use ip learned from NAT-PMP or UPNP
     -->
-    <!--If you are running this on a virtual machine online use external_rtp_ip && external_sip_ip instead -->
-    <param name="ext-rtp-ip" value="auto_nat"/>
-    <param name="ext-sip-ip" value="auto_nat"/>
+    <param name="ext-rtp-ip" value="$${external_rtp_ip}"/>
+    <param name="ext-sip-ip" value="$${external_sip_ip}"/>
 
     <!-- rtp inactivity timeout -->
     <param name="rtp-timeout-sec" value="300"/>

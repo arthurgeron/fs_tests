@@ -7,7 +7,7 @@
     confirm-macro=""
     confirm-key=""
     confirm-attempts="3"
-    timeout="10000"
+    timeout="5000"
     inter-digit-timeout="2000"
     max-failures="3"
     max-timeouts="3"
